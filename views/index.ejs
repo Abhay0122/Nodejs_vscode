@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+
+  <nav>
+    <img src="/images/icons8-source-code-48.png" alt="">
+    <h1>NODE.JS</h1>
+    <img src="/images/icons8-multiply-50.png" alt="">
+  </nav>
+
+  <div class="container">
+    <div class="panel">
+      <div class="ribbon">
+        <h3>Folder</h3>
+        <div class="ribbon_right">
+          <img id="Addfile" src="/images/icons8-new-copy-32.png" alt="">
+          <img src="/images/icons8-add-folder-50.png" alt="">
+          <img src="/images/icons8-update-left-rotation-30.png" alt="">
+        </div>
+      </div>
+      <form action="/create" method="post" id="create">
+        <input class="input" type="text" placeholder="filename.ext" name="filename">
+      </form>
+
+      <ol>
+        <% files.forEach((file)=>{%>
+          <li>
+            <img src="/images/icons8-docket-64.png" alt="">
+            <a href="/file/<%= file%>">
+              <%= file%>
+            </a>
+            <a id="filedelete" href="/delete/<%= file%>"><img src="/images/icons8-delete-trash-48.png" alt=""></a>
+          </li>
+          <%})%>
+      </ol>
+
+      <form action="/update/<%= filename%>" method="post">
+        <textarea name="data" cols="30" rows="14">
+          <%= filedata%>
+        </textarea>
+        <button>update</button>
+      </form>
+    </div>
+
+    <div class="screen">
+      <nav>
+        <div class="filename">
+          <h3>
+            <%= filename%>
+          </h3>
+          <img src="/images/icons8-multiply-50.png" alt="">
+        </div>
+      </nav>
+      <div>
+        <p>
+          <%= filedata%>
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+
+<script>
+  const create = document.querySelector("#create");
+  const Addfile = document.querySelector("#Addfile");
+
+  var flag = 1;
+  Addfile.addEventListener("click", function () {
+    if (flag === 1) {
+      create.style.display = "initial";
+      flag = 0;
+    }
+    else {
+      create.style.display = "none";
+      flag = 1;
+    }
+  })
+
+</script>

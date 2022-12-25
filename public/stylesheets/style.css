@@ -1,0 +1,171 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+nav{
+  min-height: 7vh;
+  width: 100vw;
+  /* background-color: red; */
+  padding:0 1.5vmax;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1{
+  font-size: 1.5vmax;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav img{
+  height: 38px;
+}
+
+.container{
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.panel{
+ background-color: whitesmoke ;
+ display: flex;
+ flex-direction: column;
+ padding: 0 1vw;
+}
+
+.screen{
+  margin-left: 0.1vmax;
+  background-color: whitesmoke;
+}
+
+li{
+  list-style: none;
+  margin-bottom: 1vmax;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5vmax; 
+}
+
+li>img{
+  height: 22px;
+  margin-right: 0.5vmax;
+}
+
+a{
+  color: rgba(65, 105, 225, 0.625);
+  text-decoration: none;
+}
+
+#filedelete{
+  margin-left: 1.9vmax;
+}
+
+#filedelete img{
+  height: 20px;
+}
+
+.ribbon{
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+  padding:0 1vw;
+  border-radius: 8px;
+}
+
+.ribbon h3{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1.5vmax;
+  font-weight: 500;
+}
+
+.ribbon img{
+  height: 21px;
+  margin:0 0.5vmax;
+  cursor: pointer;
+}
+
+#create{
+  display: none;
+}
+
+ol{
+  margin: 3vmax 0;
+}
+
+.input{
+  border: none;
+  outline: none;
+  background-color: white;
+  border-radius: 6px;
+  font-size: 1vmax;
+  padding: 1vmax;
+  width: 100%;
+  margin-top: 1vmax;
+}
+
+textarea{
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+button{
+  padding: 1vh 2.5vw;
+  background-color: royalblue;
+  border: none;
+  border-radius: 18px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2vmax;
+  margin-top: 1vmax;
+}
+
+.screen nav{
+  width: 100vw;
+  /* background-color: black; */
+  padding:0 1vmax;
+}
+
+.filename{
+  background-color: white;
+  border-radius: 8px;
+  padding: 0.7vmax 1.5vmax;
+  display: flex;
+  align-items: center;
+}
+
+.filename h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2vmax;
+}
+
+.filename img{
+  height: 24px;
+  margin-left: 1vmax;
+}
+
+.screen>div
+{
+  padding: 5vh 2vw;
+}
+
+.screen>div>p{
+  font-size: 1.5vmax;
+  font-family: 'Courier New', Courier, monospace;
+}
